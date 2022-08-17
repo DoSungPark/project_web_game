@@ -7,4 +7,3 @@
 이것은 깃허브 데스크탑에서 실시간으로 수정한 내용입니다.
 <br>
 ![bg2](https://user-images.githubusercontent.com/110547050/185195355-b6d4825c-0f4f-4539-ad2b-3fa9f67ad9c0.jpg)
-![bg](https://user-images.githubusercontent.com/110547050/185198859-37c836cc-6b63-454a-a67c-621c71546fd3.jpg)
