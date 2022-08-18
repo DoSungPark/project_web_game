@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>배경 이미지</title>
-<style>
-#container{
-width:1100px;
-margin:50px auto; }
-.box{
-float:left;
-border:1px solid transparent;
-width:300px;
-height:300px; 
-margin:20px;
-background:url('https://user-images.githubusercontent.com/110547050/185195355-b6d4825c-0f4f-4539-ad2b-3fa9f67ad9c0.jpg') no-repeat left top; }
-#bg { background-size:cover;} /* 배경 이미지 너비와 높이는 요소 너비의 100%, 요소 높이의 100% */ 
-</style>
+    <meta charset="utf-8">
+    <title>블랙잭</title>
+    <style>
+        button[type=btn1]{
+            position: absolute;
+            left: 45%;
+            bottom: 25%;
+            width: 250px;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 15px;
+        }
+        button[type=btn2]{
+            position: absolute;
+            left: 45%;
+            bottom: 15%;
+            width: 250px;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 15px;
+        }
+        body{
+            background:url('https://user-images.githubusercontent.com/110547050/185195355-b6d4825c-0f4f-4539-ad2b-3fa9f67ad9c0.jpg');
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+    </style>
 </head>
-<body class="box" id="bg">
+<body>
+    <form>
+        <button type="btn1" onclick="location.href='main.html'">게임 시작</button><br><br>
+        <button type="btn2" onclick="location.href='rule1.html'">게임 방법</button><br>
+    </form>        
 </body>
 </html>
