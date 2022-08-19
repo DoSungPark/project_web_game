@@ -1,5 +1,5 @@
 # 메인 페이지 ▼
-https://dosungpark.github.io/project_web_game/메인 코드/
+https://dosungpark.github.io/project_web_game
 
 
 ![bg2](https://user-images.githubusercontent.com/110547050/185195355-b6d4825c-0f4f-4539-ad2b-3fa9f67ad9c0.jpg)
