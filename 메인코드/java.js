@@ -78,7 +78,7 @@ function player_card_show(){  //플레이어 카드 보여주기
     var div = document.createElement("div");
     div.id = "player"+i;
     //div.innerHTML = player_card[i];
-    div.style.backgroundImage = "url('media/"+player_card[i]+".png')";
+    div.style.backgroundImage = "url('media/deck/"+player_card[i]+".png')";
     div.style.backgroundSize = "120px 180px";
     adu.appendChild(div);
   }
@@ -101,7 +101,7 @@ function dealer_card_show(num){  // 딜러 카드 보여주기
     var div = document.createElement("div");
     div.id = "com"+i;
   //  div.innerHTML = dealer_card[i];
-    div.style.backgroundImage = "url('media/"+dealer_card[i]+".png')";
+    div.style.backgroundImage = "url('media/deck/"+dealer_card[i]+".png')";
     div.style.backgroundSize = "120px 180px";
     adu.appendChild(div);
   }
