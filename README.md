@@ -6,4 +6,5 @@ https://dosungpark.github.io/project_web_game/메인코드
 ![rule1](https://user-images.githubusercontent.com/110547050/185495745-b4c283a9-6448-44bf-bdd9-3898ceb295bc.png)
 ![rule2](https://user-images.githubusercontent.com/110547050/185495756-ebd5901f-856c-49a5-bdf7-3ebbf6308db6.png)
 ![음량](https://user-images.githubusercontent.com/110547050/185498979-58fab0f9-6838-4cf4-bd6b-e84c90c59c2d.jpg)
+![1](https://user-images.githubusercontent.com/110547050/185750297-116dc49b-9d7b-4c3d-8c91-121a4d1e53b7.jpg)
 <br>
