@@ -3,7 +3,52 @@ body{
     background-size: cover;
     background-repeat: no-repeat; 
 }
-button[type=btn1]{
-    border-color: transparent;
-    background-color: transparent;
+.btn{
+    width:230px;
+    height:90px;
+}
+.btn0{
+    width:120px;
+    height:100px;
+}
+#btn1{
+    position:absolute;
+    bottom: 5%;
+    left:35%;
+}
+#btn2{
+    position: absolute;
+    bottom:5%;
+    left:50%;
+}
+#btn3{
+    position: absolute;
+    bottom:5%;
+    left:65%;
+}
+#btn4{
+    position: absolute;
+    bottom:5%;
+    left:73%;
+}
+#btn5{
+    position: absolute;
+    bottom:5%;
+    left:81%;
+}
+.ui{
+    width: 200px;
+    height: 60px;
+    font-size: 17px;
+    border-radius: 15px;
+}
+#btg{
+    position: absolute;
+    left: 22%;
+    bottom: 10%;
+}
+#cnm{
+    position: absolute;
+    left: 22%;
+    bottom: 2%;
 }
