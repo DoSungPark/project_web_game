@@ -1,8 +1,4 @@
-button[type=spk]{
-    border-color: transparent;
-    background-color: transparent;
-}
-button[type=btn1]{
+#btn1{
     position: absolute;
     left: 45%;
     bottom: 25%;
@@ -11,7 +7,7 @@ button[type=btn1]{
     font-size: 17px;
     border-radius: 15px;
 }
-button[type=btn2]{
+#btn2{
     position: absolute;
     left: 45%;
     bottom: 15%;

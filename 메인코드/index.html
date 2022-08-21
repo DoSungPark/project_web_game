@@ -3,12 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>블랙잭</title>
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+        const load = document.getElementById("btn1");
+        load.addEventListener("click",function(){
+            location.href="https://naver.com";
+        })
+    </script>
 </head>
 <body>
     <form>
-        <button type="btn1" onclick="location.href='/main.html'">게임 시작</button><br><br>
-        <button type="btn2" onclick="location.href='/rule1.html'">게임 방법</button><br>
+        <button id="btn1">게임 시작</button><br><br>
+        <button id="btn2">게임 방법</button><br>
     </form>
 </body>
 </html>
