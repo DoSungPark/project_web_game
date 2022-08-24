@@ -21,3 +21,12 @@ body{
     background-size: cover;
     background-repeat: no-repeat; 
 }
+.rule{
+    position:absolute;
+    left:17%;
+    bottom:5%;
+    visibility:hidden;
+}
+.vis{
+    visibility:visible;
+}

@@ -9,14 +9,16 @@
     <form>
         <button id="btn1" class="btn" onclick="start()">게임 시작</button><br><br>
         <button id="btn2" class="btn" onclick="rule()">게임 방법</button><br>
-        <script>
-            function start(){
-            location.href="main.html";
-            }
-            function rule(){
-            location.href="rule1.html";
-            }
-        </script>
     </form>
+    <div>
+        <img id="rule1" class="rule" src="media/배경/001.png">
+        <img id="rule2" class="rule" src="media/배경/002.png">
+    </div>
+    <script>
+        if(document.getElementById('btn2').clicked==true)
+        {
+            alert("button was clicked");
+        }
+    </script>
 </body>
 </html>

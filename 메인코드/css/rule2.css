@@ -3,3 +3,17 @@ body{
     background-size: cover;
     background-repeat: no-repeat; 
 }
+.ar{
+    width:150px;
+    height:150px;
+}
+#ar2{
+    position:absolute;
+    left:53%;
+    bottom:0%;
+}
+#ar1{
+    position:absolute;
+    left:47%;
+    bottom:0%;
+}
