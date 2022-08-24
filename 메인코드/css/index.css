@@ -29,6 +29,7 @@ body{
 .ar{
     position:absolute;
     bottom:5%;
+    cursor : pointer;
 }
 #ar1{
     left:43%;
@@ -42,4 +43,7 @@ body{
     position:absolute;
     left:75%;
     bottom: 82%;
+}
+.btn{
+    cursor : pointer;
 }

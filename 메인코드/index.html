@@ -13,9 +13,9 @@
     <div>
         <img id="rule1" class="rule" src="media/배경/001.png">
         <img id="rule2" class="rule" src="media/배경/002.png">
-        <img id="ar1" class="ar" src="media/버튼/ar1.png">
-        <img id="ar2" class="ar" src="media/버튼/ar2.png">
-        <img id="cl" src="media/버튼/close.png">
+        <img id="ar1" class="ar" onclick="rule()" src="media/버튼/ar1.png">
+        <img id="ar2" class="ar" onclick="rule2()" src="media/버튼/ar2.png">
+        <img id="cl" class="ar" onclick="cl()" src="media/버튼/close.png">
     </div>
     <script>
         window.onload=function (){
@@ -26,11 +26,43 @@
             document.getElementById("cl").style.visibility="hidden";
         }
         function rule(){
+            event.preventDefault();
             document.getElementById("rule1").style.visibility="visible";
+            event.preventDefault();
             document.getElementById("rule2").style.visibility="hidden";
+            event.preventDefault();
             document.getElementById("ar1").style.visibility="visible";
+            event.preventDefault();
             document.getElementById("ar2").style.visibility="visible";
+            event.preventDefault();
             document.getElementById("cl").style.visibility="visible";
+            event.preventDefault();
+        }
+        function rule2(){
+            event.preventDefault();
+            document.getElementById("rule1").style.visibility="hidden";
+            event.preventDefault();
+            document.getElementById("rule2").style.visibility="visible";
+            event.preventDefault();
+            document.getElementById("ar1").style.visibility="visible";
+            event.preventDefault();
+            document.getElementById("ar2").style.visibility="visible";
+            event.preventDefault();
+            document.getElementById("cl").style.visibility="visible";
+            event.preventDefault();
+        }
+        function cl(){
+            event.preventDefault();
+            document.getElementById("rule1").style.visibility="hidden";
+            event.preventDefault();
+            document.getElementById("rule2").style.visibility="hidden";
+            event.preventDefault();
+            document.getElementById("ar1").style.visibility="hidden";
+            event.preventDefault();
+            document.getElementById("ar2").style.visibility="hidden";
+            event.preventDefault();
+            document.getElementById("cl").style.visibility="hidden";
+            event.preventDefault();
         }
     </script>
 </body>
