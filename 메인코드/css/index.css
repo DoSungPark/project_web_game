@@ -47,3 +47,10 @@ body{
 .btn{
     cursor : pointer;
 }
+.n{
+    position:absolute;
+    left:47%;
+    bottom:7%;
+    width:130px;
+    height:50px;
+}
