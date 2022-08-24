@@ -7,17 +7,30 @@
 </head>
 <body>
     <form>
-        <button id="btn1" class="btn" onclick="start()">게임 시작</button><br><br>
+        <button id="btn1" class="btn" formaction="main.html">게임 시작</button>
         <button id="btn2" class="btn" onclick="rule()">게임 방법</button><br>
     </form>
     <div>
         <img id="rule1" class="rule" src="media/배경/001.png">
         <img id="rule2" class="rule" src="media/배경/002.png">
+        <img id="ar1" class="ar" src="media/버튼/ar1.png">
+        <img id="ar2" class="ar" src="media/버튼/ar2.png">
+        <img id="cl" src="media/버튼/close.png">
     </div>
     <script>
-        if(document.getElementById('btn2').clicked==true)
-        {
-            alert("button was clicked");
+        window.onload=function (){
+            document.getElementById("rule1").style.visibility="hidden";
+            document.getElementById("rule2").style.visibility="hidden";
+            document.getElementById("ar1").style.visibility="hidden";
+            document.getElementById("ar2").style.visibility="hidden";
+            document.getElementById("cl").style.visibility="hidden";
+        }
+        function rule(){
+            document.getElementById("rule1").style.visibility="visible";
+            document.getElementById("rule2").style.visibility="hidden";
+            document.getElementById("ar1").style.visibility="visible";
+            document.getElementById("ar2").style.visibility="visible";
+            document.getElementById("cl").style.visibility="visible";
         }
     </script>
 </body>

@@ -25,8 +25,21 @@ body{
     position:absolute;
     left:17%;
     bottom:5%;
-    visibility:hidden;
 }
-.vis{
-    visibility:visible;
+.ar{
+    position:absolute;
+    bottom:5%;
+}
+#ar1{
+    left:43%;
+}
+#ar2{
+    left:53%;
+}
+#cl{
+    width: 130px;
+    height: 130px;
+    position:absolute;
+    left:75%;
+    bottom: 82%;
 }
