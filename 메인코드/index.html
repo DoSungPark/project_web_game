@@ -16,8 +16,9 @@
         <img id="ar1" class="ar" onclick="rule()" src="media/버튼/ar1.png">
         <img id="ar2" class="ar" onclick="rule2()" src="media/버튼/ar2.png">
         <img id="cl" class="ar" onclick="cl()" src="media/버튼/close.png">
-        <img id="12" class="n" onclick="cl()" src="media/버튼/12.png">
-        <img id="22" class="n" onclick="cl()" src="media/버튼/22.png">
+        <img id="12" class="n" src="media/버튼/12.png">
+        <img id="22" class="n" src="media/버튼/22.png">
+        
     </div>
     <script>
         window.onload=function (){
@@ -45,6 +46,7 @@
             event.preventDefault();
             document.getElementById("22").style.visibility="hidden";
             event.preventDefault();
+            
         }
         function rule2(){
             event.preventDefault();
@@ -81,5 +83,6 @@
             event.preventDefault();
         }
     </script>
+    <audio src="media/toad.mp3" autoplay loop></audio>
 </body>
 </html>

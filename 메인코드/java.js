@@ -10,15 +10,15 @@ var deck = ["1a","1b","1c","1d","2a","2b","2c","2d","3a","3b","3c","3d","4a","4b
             "ja","jb","jc","jd","qa","qb","qc","qd","ka","kb","kc","kd"];
  
 
-var money = 1000000;
-var vet_money = 0;
+
+
 var card=[];
 var rst = [];
 var suffle_sound = new Audio("" ) ;
 var draw_sound = new Audio("");
 var betting_sound = new Audio("");
 var hit_sound = new Audio("");
-var stay_sound = new Audio("");
+var stand_sound = new Audio("");
 var bust_sound = new Audio("");
 var win_sound = new Audio("");
 var lose_sound = new Audio("");
@@ -57,12 +57,15 @@ function shuffle(){ //카드 셔플
  
  
  
+var money =1000000;
+var vet_money = 0;
+
 var player_card=[]; //플레이어 보유 카드
 var dealer_card=[];  //딜러 보유 카드
 var count= 0;
 var dealer_burst=0;
 var player_burst=0;
-var score =500;
+
 function player_draw(){   //플레이어 카드 1장 뽑기
   player_card.push(card[count++]);
   cal_player(0);
@@ -70,10 +73,10 @@ function player_draw(){   //플레이어 카드 1장 뽑기
  
 function dealer_draw(){  //딜러 카드 1장 뽑기
   draw_sound.play();
-  var num = parseInt(cal_deler(0));
+  var num = parseInt(cal_dealer(0));
   if (num < 17){
     dealer_card.push(card[count++]); /// 17 미만이면 더 뽑기
-    cal_deler(0);
+    cal_dealer(0);
   }
  
  
@@ -94,7 +97,7 @@ function player_card_show(){  //플레이어 카드 보여주기
   }
 }
 function dealer_card_show(num){  // 딜러 카드 보여주기
-  var adu = document.getElementById("deler_board");
+  var adu = document.getElementById("dealer_board");
   while ( adu.hasChildNodes() )
   {
     adu.removeChild( adu.firstChild );  //딜러 필드의 카드 제거
@@ -157,7 +160,7 @@ function player_burst(){    //플레이어 버스트 확인
     player_burst=1;
     lose_sound.play();
     alert("플레이어가 버스트 되었습니다ㅠㅠ");
-    score-=100;
+    money-=100;
     player_card_show();
     dealer_card_show(0);
     setTimeout(end,100);
@@ -170,12 +173,12 @@ function alert_dealer_burst(){
   alert("딜러가 버스트 되었습니다!");
   if(player_num==21){
     callaudio.play();
-    score+=100;
+    money+=100;
     alert("플레이어가 ♠블랙잭♠ 성공!");
   }
   else if(player_num>21&&player_burst==0){
     player_burst=1;
-    score-=100;
+    money-=100;
     alert("플레이어가 버스트 되었습니다ㅠㅠ");
   }
   else {
@@ -183,10 +186,10 @@ function alert_dealer_burst(){
   }
 }
  
-function deler_burst(){ //딜러 버스트 확인
+function dealer_burst(){ //딜러 버스트 확인
   dealer_card_show(0);
   if(dealer_burst==0){
-    score+=100;
+    money+=100;
     setTimeout(alert_dealer_burst,100);
  
     dealer_burst=1;
@@ -234,7 +237,7 @@ if(ace==1){
 
 }
  
-function cal_deler(ace){    //딜러 합 계산
+function cal_dealer(ace){    //딜러 합 계산
   var num = 0;
   if(ace==0){
     for (var i = 0; i < dealer_card.length; i++) {
@@ -248,11 +251,11 @@ function cal_deler(ace){    //딜러 합 계산
         num += parseInt(dealer_card[i][0]);
       }
     }
-    var deler_num = document.getElementById('deler_num');
-    deler_num.value = num;
+    var dealer_num = document.getElementById('dealer_num');
+    dealer_num.value = num;
     if(num>21){
  
-      return cal_deler(1);
+      return cal_dealer(1);
     }
   }
   if(ace==1){
@@ -265,8 +268,8 @@ function cal_deler(ace){    //딜러 합 계산
         num += parseInt(dealer_card[i][0]);
       }
     }
-    var deler_num = document.getElementById('deler_num');
-    deler_num.value = num;
+    var dealer_num = document.getElementById('dealer_num');
+    dealer_num.value = num;
  
   }
   return num;
@@ -275,45 +278,47 @@ function cal_deler(ace){    //딜러 합 계산
 
 
 
-function pick(){    // 카드 뽑기 선택
+function hit(){    // 카드 뽑기(히트) 선택
+  hit_sound.play();
   player_draw();
   player_card_show();
   dealer_draw();
   dealer_card_show(1);
-  var com_num = cal_deler(0);
+  var com_num = cal_dealer(0);
   if(com_num>21){
-    setTimeout(deler_burst,100);
+    setTimeout(dealer_burst,100);
     dealer_card_show(0);
   }
 }
 
 
-function hit_to(){   //히트 선택
+function stand_to(){   //스탠드 선택
+  stand_sound.play();
   dealer_card_show(0);
-  setTimeout(hit,100);
+  setTimeout(stand,100);
 }
 
 
-function hit(){  //히트 기능
+function stand(){  //스탠드 기능
   var player_num = cal_player(0);
-  var com_num = cal_deler(0);
+  var com_num = cal_dealer(0);
   player_card_show();
   dealer_card_show(0);   //딜러 카드 오픈
  
   if(com_num>21){
-    setTimeout(deler_burst,100);    //딜러 버스트 확인
+    setTimeout(dealer_burst,100);    //딜러 버스트 확인
     dealer_card_show(0);
   }
   else if(com_num < 17){    //딜러 17 미만시 드로우 하기
     dealer_draw();
     dealer_card_show(0);
-    setTimeout(hit,300);
+    setTimeout(stand,300);
     return;
   }
  
   else{
     if(player_num==21){             //플레이어 블랙잭 확인
-      score+=100;
+      money+=100;
       alert("플레이어가 ♠블랙잭♠ 성공!");
     }
     dealer_card_show(0);
@@ -321,18 +326,18 @@ function hit(){  //히트 기능
       alert("무승부");
     }
     if(com_num==21){      //딜러 블랙잭 확인
-      score-=100;
+      money-=100;
       alert("딜러의 블랙잭 성공으로 패배합니다.");
     }
  
     if((player_num>com_num&&player_num<22)||com_num>21){    //플레이어 승
       callaudio.play();
-      score+=100;
+      money+=100;
       alert("플레이어 승리 v^^v");
     }
     else if((player_num<com_num&&com_num<22)||player_num>21){   //플레이어 패
     lose_sound.play();
-      score-=100;
+      money-=100;
       alert("플레이어 패배 ㅠ.ㅠ");
     }
     else{
@@ -343,24 +348,24 @@ function hit(){  //히트 기능
 }
 
 
-/* 포기 기능
+
 
 function give_up(){   //포기
   alert("give_up");
-  score-=50;
+  money-=50;
   player_card_show();
   dealer_card_show(0);
   setTimeout(end,100);
 
 }
-*/
+
 
 function end(){   //턴 종료
  
   player_card_show();
   dealer_card_show(0);
   var player_score = document.getElementById('player_score');
-  player_score.value = score;
+  player_score.value = money;
  
   document.getElementById('restart').style.display = "block";   //다시하기 버튼 보여주기 ( 혹은 베팅 버튼 )
   document.getElementById('gaming').style.display = "none";     //게임 버튼 삭제

@@ -6,41 +6,55 @@ body{
 .btn{
     width:230px;
     height:90px;
+    cursor : pointer;
 }
 .btn0{
     width:120px;
     height:100px;
+    cursor : pointer;
 }
 #btn1{
     position:absolute;
     bottom: 5%;
     left:35%;
+    cursor : pointer;
 }
 #btn2{
     position: absolute;
     bottom:5%;
     left:50%;
+    cursor : pointer;
 }
 #btn3{
     position: absolute;
     bottom:5%;
     left:65%;
+    cursor : pointer;
 }
 #btn4{
     position: absolute;
     bottom:5%;
     left:73%;
+    cursor : pointer;
 }
 #btn5{
     position: absolute;
     bottom:5%;
     left:81%;
+    cursor : pointer;
 }
 .ui{
     width: 200px;
     height: 60px;
     font-size: 17px;
     border-radius: 15px;
+}
+#start{
+    position: absolute;
+    left: 31.3%;
+    bottom: 10.15%;
+    width: 4%;
+    height: 4%;
 }
 #btg{
     position: absolute;
@@ -52,3 +66,48 @@ body{
     left: 22%;
     bottom: 2%;
 }
+  .player_board{
+    position:absolute;
+    bottom: 150px;
+    left: 50%;
+    width: 500px;
+    height: 250px;
+    /*background-color: green;
+    border: 3px solid black;*/
+    margin: 0px 0px 0px -250px;
+    padding: 0px 0px 0px 30px;
+  }
+  .player_board div{
+    margin-top: 30px;
+    margin-right:-70px;
+    width: 120px;
+    height: 180px;
+    float: left;
+    font-size: 30pt;
+  }
+  .deler_board{
+    position:absolute;
+    top: 50px;
+    left: 50%;
+    width: 500px;
+    height: 250px;
+    /*background-color: green;
+    border: 3px solid black;*/
+    margin: 0px 0px -125px -250px;
+    padding: 0px 0px 0px 30px;
+  }
+  .deler_board div{
+    margin-top: 30px;
+    margin-right:-70px;
+    width: 120px;
+    height: 180px;
+    float: left;
+    font-size: 30pt;
+  }
+  .show{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: -40px 0px 0px -125px;
+    align: center;
+  }

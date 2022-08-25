@@ -4,16 +4,47 @@
     <meta charset="utf-8">
     <title>블랙잭</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="original.js"></script>
 </head>
 <body>
+
+
+
+    <div class="player_board" id="player_board"></div>
+ 
+    <div class="deler_board" id="deler_board"></div>
+ 
+
+ <div class="show">
+ 
+    <div id="com_num_board">
+       딜러 합 : <input type="text" name="" value="" id="deler_num">
+    </div>
+
+    <div  id="player_num_board">
+     플레이어 합 : <input type="text" name="" value="" id="player_num"><br>
+      
+    </div>
+    
+
+ </div>
+
     <form>
-        <img class="btn" id="btn1" src="media/버튼/hit2.png">
-        <img class="btn" id="btn2" src="media/버튼/stand.png">
+        
+        <img class="btn" id="btn1" src="media/버튼/hit2.png" onclick="pick()">
+        <img class="btn" id="btn2" src="media/버튼/stand.png" onclick="call_to()">
         <img class="btn0" id="btn3" src="media/버튼/double.png">
         <img class="btn0" id="btn4" src="media/버튼/spit.png">
-        <img class="btn0" id="btn5" src="media/버튼/surrender.png">
-        <button class="ui" id="btg">베팅금: 0</button><br><br>
-        <button class="ui" id="cnm">자산: 0</button><br>
+        <img class="btn0" id="btn5" src="media/버튼/surrender.png" onclick="give_up()">
+        <button class="ui" id="btg">베팅금: <input type="text" name="" value="10000" id="vet_money"></button>
+        <div  id="start">
+            <input type="button"  name="" value="결정!" onclick="new_start()">
+        </div>
+        <div  id="restart" style="display:none;">
+            <input type="button"  name="" value="다시 시작" onclick="turn()" >
+        </div><br><br>
+        <button class="ui" id="cnm">자산: <span id="money">1000000</span></button><br>
     </form>
+    <audio src="media/42.mp3" autoplay loop></audio>
 </body>
 </html>
